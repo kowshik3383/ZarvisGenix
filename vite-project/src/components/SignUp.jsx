@@ -27,7 +27,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
+      const response = await axios.post('https://zarvisgenix-1.onrender.com/api/auth/signup', formData);
       const { token, firstName, lastName, email, department, number } = response.data;
 
       // Store token and user details in localStorage
@@ -151,7 +151,7 @@ const Signup = () => {
         </div>
 
         <button
-          className="bg-blue-100 text-white font-medium rounded-xl mt-6 w-full h-10"
+          className="bg-blue-100 text-white font-medium rounded-xl mt-6 w-96 h-10"
           type="submit"
           disabled={loading}
         >
