@@ -16,7 +16,7 @@ import Learning from './components/learning/Learning'
 import Payroll from './components/payroll/Payroll'
 import Expense from "./components/expenses/Expense";
 import Data from './components/data/Data'
-import Logo from "./components/Logo";
+
 function App() {
  
 
@@ -45,7 +45,7 @@ function App() {
          <Route path='/pay' element={<Payroll/>}/>
          <Route path='/expense' element={<Expense/>}/>
          <Route path='/data' element={<Data/>}/>
-         <Route path='/daa' element={<Logo/>}/>
+   
         </Routes>
       </BrowserRouter>
     </>
