@@ -9,7 +9,7 @@ import { CiCirclePlus } from "react-icons/ci"; // Import CiCirclePlus
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import logo from "../../public/logo.svg";
+import Logo from "../../public/Logo.svg";
 import { TbClockCheck } from "react-icons/tb";
 import { BsCashCoin } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
@@ -157,7 +157,7 @@ const Sidebar = () => {
             />
           </svg>
           Data Protection <br />
-          (GDPR)
+          
         </a>
       </div>
       
