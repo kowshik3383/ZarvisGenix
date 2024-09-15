@@ -45,7 +45,7 @@ const Signup = () => {
 
   return (
     <section className="ml-24">
-      <img src={logo} alt="Logo" className="w-32 mb-4" />
+      <img src={Logo} alt="Logo" className="w-32 mb-4" />
       <h1 className="text-blue-100 text-4xl font-semibold mb-2">Hello!</h1>
       <h1 className="mb-9">Please enter your details</h1>
       
