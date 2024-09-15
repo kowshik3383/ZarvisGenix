@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa"; // Import FaDotCircle
 import { CiCirclePlus } from "react-icons/ci"; // Import CiCirclePlus
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation ,Link } from "react-router-dom";
 import axios from "axios";
 import Logo from "../../public/Logo.svg";
 import { TbClockCheck } from "react-icons/tb";
@@ -82,84 +82,65 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <div className="block  h-screen pl-20   space-y-5 -mt-40 font-medium ">
-		
-        <a href="/" className="mt-48 flex h-12 w-52 pt-2   rounded-xl      ">
-          <RiHomeSmile2Fill className="mt-1" color="rgba(0, 161, 0, 1)" /> Home <IoIosArrowForward className="ml-24 mt-2"/>
-        </a>
-        <a
-  href="/employe"
-  className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/employe" ? "bg-blue-300" : ""
-  }`}
->
-          <IoIosPeople className="mt-1" color="rgba(0, 161, 0, 1)" />
-          Employees
-        </a>
-        <a href="/clock" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/clock" ? "bg-blue-300" : ""
-  }`}>
-          <FaCalendar className="mt-1" color="rgba(0, 161, 0, 1)" /> Clock-ins
-        </a>
-        <a href="/calendar" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/calendar" ? "bg-blue-300" : ""
-  }`}>
-          <GiRecycle className="mt-1" color="rgba(0, 161, 0, 1)" /> Calender
-        </a>
-        <a href="/absense" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/absense" ? "bg-blue-300" : ""
-  }`}>
-          {" "}
-          <TbClockCheck className="mt-1" color="rgba(0, 161, 0, 1)" /> Shifts
-        </a>
-        <a href="/document" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/document" ? "bg-blue-300" : ""
-  }`}>
-          {" "}
-          <FaFolder className="mt-1" color="rgba(0, 161, 0, 1)" /> Documents
-        </a>
-        <a href="/learning" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/learning" ? "bg-blue-300" : ""
-  }`}>
-          <FaGraduationCap className="mt-1" color="rgba(0, 161, 0, 1)" /> E-learning
-        </a>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
-          <FiFileText className="mt-1" color="rgba(0, 161, 0, 1)" />
-          Reports
-        </button>
-        <a href="/pay" className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/pay" ? "bg-blue-300" : ""
-  }`}>
-          <BsCashCoin className="mt-1" color="rgba(0, 161, 0, 1)" />
-          Payroll
-        </a>
-        <a href='/expense' className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/expense" ? "bg-blue-300" : ""
-  }`}>
-          <AiFillWallet className="mt-1" color="rgba(0, 161, 0, 1)" />
-          Expenses
-        </a>
-        <a href='/data' className={`flex h-12 w-52 pt-2 rounded-xl ${
-    location.pathname === "/data" ? "bg-blue-300" : ""
-  }`}>
-          <svg
-            width="28"
-            height="32"
-            viewBox="0 0 28 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M20.9458 19.7825C22.8011 17.0097 24.2443 13.4119 23.9648 9.08116C23.9379 8.65646 23.8074 8.26442 23.5879 7.92751C23.3705 7.59061 23.0641 7.31087 22.6831 7.10873C22.3042 6.90658 21.9004 6.80858 21.4945 6.81266C21.0887 6.81674 20.6849 6.92496 20.3102 7.13323L19.1444 7.78458C18.9001 7.92139 18.6371 7.98877 18.3804 7.98469C18.1236 7.9806 17.8648 7.9071 17.6246 7.76417L15.2682 6.35733C14.8686 6.11843 14.4338 6 14.001 6C13.5683 6 13.1314 6.12047 12.7338 6.35733L10.3775 7.76417C10.1373 7.9071 9.87844 7.98264 9.62168 7.98469C9.36286 7.98877 9.10403 7.92139 8.85763 7.78458L7.69188 7.13323C7.3171 6.92292 6.91333 6.81674 6.50749 6.81266C6.10165 6.80858 5.69788 6.90658 5.31896 7.10873C4.93797 7.31087 4.63152 7.59061 4.41411 7.92751C4.19669 8.26442 4.06624 8.65646 4.03725 9.08116C3.75772 13.4119 5.20094 17.0097 7.0562 19.7825C8.90111 22.5391 11.1539 24.4747 12.5164 25.4997C12.9616 25.8346 13.4813 26.002 14.0031 26.002C14.5249 26.002 15.0446 25.8346 15.4898 25.4997C16.8502 24.4747 19.1051 22.5391 20.95 19.7825H20.9458ZM14.1273 20.4604C13.9555 20.2644 13.9782 19.9704 14.175 19.8009C15.0591 19.0475 16.0074 18.0755 16.8108 16.8811C17.6101 15.6947 18.2644 14.2899 18.5605 12.6626C18.6061 12.4074 18.8525 12.2399 19.1113 12.2848C19.3701 12.3298 19.5399 12.5727 19.4943 12.828C19.1713 14.5962 18.4653 16.1174 17.6039 17.3977C16.7466 18.6697 15.7362 19.707 14.7961 20.5074C14.5974 20.6769 14.2992 20.6544 14.1273 20.4604Z"
-              fill="#00A100"
-            />
-          </svg>
-          Data Protection <br />
-          
-        </a>
-      </div>
+      <div className="block h-screen pl-20 space-y-5 -mt-40 font-medium">
+  <Link to="/" className="mt-48 flex h-12 w-52 pt-2 rounded-xl">
+    <RiHomeSmile2Fill className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Home <IoIosArrowForward className="ml-24 mt-2" />
+  </Link>
+
+  <Link to="/employe" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/employe" ? "bg-blue-300" : ""}`}>
+    <IoIosPeople className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Employees
+  </Link>
+
+  <Link to="/clock" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/clock" ? "bg-blue-300" : ""}`}>
+    <FaCalendar className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Clock-ins
+  </Link>
+
+  <Link to="/calendar" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/calendar" ? "bg-blue-300" : ""}`}>
+    <GiRecycle className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Calendar
+  </Link>
+
+  <Link to="/absense" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/absense" ? "bg-blue-300" : ""}`}>
+    <TbClockCheck className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Shifts
+  </Link>
+
+  <Link to="/document" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/document" ? "bg-blue-300" : ""}`}>
+    <FaFolder className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Documents
+  </Link>
+
+  <Link to="/learning" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/learning" ? "bg-blue-300" : ""}`}>
+    <FaGraduationCap className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    E-learning
+  </Link>
+
+  <button className="flex h-12 w-52 pt-2 rounded-xl">
+    <FiFileText className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Reports
+  </button>
+
+  <Link to="/pay" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/pay" ? "bg-blue-300" : ""}`}>
+    <BsCashCoin className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Payroll
+  </Link>
+
+  <Link to="/expense" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/expense" ? "bg-blue-300" : ""}`}>
+    <AiFillWallet className="mt-1" color="rgba(0, 161, 0, 1)" /> 
+    Expenses
+  </Link>
+
+  <Link to="/data" className={`flex h-12 w-52 pt-2 rounded-xl ${location.pathname === "/data" ? "bg-blue-300" : ""}`}>
+    <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fillRule="evenodd" clipRule="evenodd" d="M20.9458 19.7825C22.8011 17.0097 24.2443 13.4119 23.9648 9.08116..." fill="#00A100"/>
+    </svg>
+    Data Protection
+  </Link>
+</div>
+
       
       
     </section>
