@@ -3,7 +3,7 @@ import { login } from '../api';
 import { GoogleLogin } from '@react-oauth/google';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import sun from '../../public/sun.svg';
-import logo from "/logo.svg";
+import logo from "../../public/logo.svg";
 
 import frame from '../../public/frame.svg'
 import { useNavigate } from 'react-router-dom'; // Assuming you want to redirect after login
