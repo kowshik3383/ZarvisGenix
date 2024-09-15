@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { login } from '../api';
 import { GoogleLogin } from '@react-oauth/google';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import sun from '../../public/sun.svg';
+import sun from '../../public/sun';
 import logo from "../../public/logo.svg";
 
 import frame from '../../public/frame.svg'
