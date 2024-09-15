@@ -104,7 +104,7 @@ const Login = () => {
 
       {/* Success Toast */}
       {showSuccessToast && (
-        <div className="fixed top-4 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded shadow-lg animate-fade-in">
+        <div className="fixed top-4 right-4 bg-green-100 border border-green-200 text-green-700 px-4 py-3 rounded shadow-lg animate-fade-in">
           <strong className="font-bold">Success!</strong>
           <span className="block sm:inline"> You have logged in with Google.</span>
         </div>
