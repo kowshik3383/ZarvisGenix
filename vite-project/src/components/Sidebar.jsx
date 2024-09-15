@@ -67,7 +67,7 @@ const Sidebar = () => {
   return (
     <section className="text-lg shadow-lg h-cu ">
       <div className="flex border-b-2 h-20 items-center space-x-5">
-        <img className="h-9" src={logo} alt="Logo" />
+        <img className="h-9" src={Logo} alt="Logo" />
         <div className="flex flex-col">
           <h1 className="font-semibold text-lg text-black">
             {user?.firstName} {user?.lastName}
