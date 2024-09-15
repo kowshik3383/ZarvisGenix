@@ -3,7 +3,7 @@ import { login } from '../api';
 import { GoogleLogin } from '@react-oauth/google';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import sun from '../../public/sun.svg';
-import logo from "../../public/logo.svg";
+
 
 import frame from '../../public/frame.svg'
 import { useNavigate } from 'react-router-dom'; // Assuming you want to redirect after login
@@ -112,7 +112,7 @@ const Login = () => {
       )}
       </div>
       <div className='login_svg'>
-        <img className='h-16 mt-10 ml-28' src={logo} alt="/" />
+ 
         <img className='mt-20 h-72' src={frame} alt="" />
        
       </div>
