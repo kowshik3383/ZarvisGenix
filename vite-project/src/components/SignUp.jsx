@@ -30,12 +30,10 @@ const Signup = () => {
       const response = await axios.post('https://zarvisgenix-1.onrender.com/api/auth/signup', formData);
       const { token, firstName, lastName, email, department, number } = response.data;
 
-      // Store token and user details in localStorage
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify({ firstName, lastName, email, department, number }));
 
-      // Navigate to a different page or show a success message
-      navigate('/'); // Adjust the route as necessary
+      navigate('/'); 
     } catch (err) {
       console.error(err.response?.data?.msg || 'Signup failed');
     } finally {
@@ -44,15 +42,15 @@ const Signup = () => {
   };
 
   return (
-    <section className="ml-24">
+    <section className="flex flex-col items-center justify-center h-screen">
       <img src={Logo} alt="Logo" className="w-32 mb-4" />
       <h1 className="text-blue-100 text-4xl font-semibold mb-2">Hello!</h1>
       <h1 className="mb-9">Please enter your details</h1>
       
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-lg">
         <div className="flex space-x-8">
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="text"
             name="firstName"
             value={formData.firstName}
@@ -61,7 +59,7 @@ const Signup = () => {
             required
           />
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="text"
             name="lastName"
             value={formData.lastName}
@@ -73,7 +71,7 @@ const Signup = () => {
 
         <div className="flex space-x-8">
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="email"
             name="email"
             value={formData.email}
@@ -82,7 +80,7 @@ const Signup = () => {
             required
           />
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="password"
             name="password"
             value={formData.password}
@@ -94,7 +92,7 @@ const Signup = () => {
 
         <div className="flex space-x-8">
           <select
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             name="gender"
             value={formData.gender}
             onChange={handleChange}
@@ -105,7 +103,7 @@ const Signup = () => {
           </select>
 
           <select
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             name="department"
             value={formData.department}
             onChange={handleChange}
@@ -123,7 +121,7 @@ const Signup = () => {
 
         <div className="flex space-x-8">
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="tel"
             name="number"
             value={formData.number}
@@ -132,7 +130,7 @@ const Signup = () => {
             required
           />
           <input
-            className="bg-blue-300 w-80 rounded-md h-10 px-4"
+            className="bg-blue-300 w-full rounded-md h-10 px-4"
             type="tel"
             name="emergencyNumber"
             value={formData.emergencyNumber}
@@ -145,13 +143,12 @@ const Signup = () => {
         <div className="flex items-center space-x-2 mt-4">
           <input
             type="checkbox"
-            // If you need to handle toggle change, define `toggle` state and `onToggleChange` method
           />
           <span>Receive notifications</span>
         </div>
 
         <button
-          className="bg-blue-100 text-white font-medium rounded-xl mt-6 w-96 h-10"
+          className="bg-blue-100 text-white font-medium rounded-xl mt-6 w-full h-10"
           type="submit"
           disabled={loading}
         >
