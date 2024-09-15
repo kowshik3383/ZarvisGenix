@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.login_h1{
+  font-family: Poppins;
+  color: rgba(0, 161, 0, 1);
+  font-size: 2rem;
+  margin-left: 7rem;
+  margin-top: 5rem;
+  font-weight: 600;
+}
+.login_p{
+  font-family: Poppins;
+  font-size: 1rem;
+  margin-left: 8rem;
+}
+.logo{
+  margin-left: 40%;
+  margin-top: 1rem;
+}
+input::placeholder {
+ padding-left: 1rem;
+}
+
+.login_svg{
+  background: linear-gradient(145.65deg, rgba(255, 255, 255, 0.2) 10.95%, rgba(0, 191, 0, 0.2) 99.49%);
+height: 100vh;
+border-radius:5rem;
+}
+button{
+  display: block;
+}
