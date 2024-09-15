@@ -24,6 +24,9 @@ export default {
 				'900':'rgba(235,235,235,1)'
 
   			},
+			red:{
+				'100':'rgba(0, 161, 0, 0.1)'
+			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

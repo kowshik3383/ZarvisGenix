@@ -84,43 +84,64 @@ const Sidebar = () => {
 
       <div className="block  h-screen pl-20   space-y-5 -mt-40 font-medium ">
 		
-        <button className="mt-48 flex h-12 w-52 pt-2   rounded-xl  bg-blue-300    ">
+        <a href="/" className="mt-48 flex h-12 w-52 pt-2   rounded-xl      ">
           <RiHomeSmile2Fill className="mt-1" color="rgba(0, 161, 0, 1)" /> Home <IoIosArrowForward className="ml-24 mt-2"/>
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a
+  href="/employe"
+  className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/employe" ? "bg-blue-300" : ""
+  }`}
+>
           <IoIosPeople className="mt-1" color="rgba(0, 161, 0, 1)" />
           Employees
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a href="/clock" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/clock" ? "bg-blue-300" : ""
+  }`}>
           <FaCalendar className="mt-1" color="rgba(0, 161, 0, 1)" /> Clock-ins
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a href="/calendar" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/calendar" ? "bg-blue-300" : ""
+  }`}>
           <GiRecycle className="mt-1" color="rgba(0, 161, 0, 1)" /> Calender
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a href="/absense" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/absense" ? "bg-blue-300" : ""
+  }`}>
           {" "}
           <TbClockCheck className="mt-1" color="rgba(0, 161, 0, 1)" /> Shifts
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a href="/document" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/document" ? "bg-blue-300" : ""
+  }`}>
           {" "}
           <FaFolder className="mt-1" color="rgba(0, 161, 0, 1)" /> Documents
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl   ">
+        </a>
+        <a href="/learning" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/learning" ? "bg-blue-300" : ""
+  }`}>
           <FaGraduationCap className="mt-1" color="rgba(0, 161, 0, 1)" /> E-learning
-        </button>
+        </a>
         <button className="flex h-12 w-52 pt-2   rounded-xl   ">
           <FiFileText className="mt-1" color="rgba(0, 161, 0, 1)" />
           Reports
         </button>
-        <button className="flex ">
+        <a href="/pay" className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/pay" ? "bg-blue-300" : ""
+  }`}>
           <BsCashCoin className="mt-1" color="rgba(0, 161, 0, 1)" />
           Payroll
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl  ">
+        </a>
+        <a href='/expense' className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/expense" ? "bg-blue-300" : ""
+  }`}>
           <AiFillWallet className="mt-1" color="rgba(0, 161, 0, 1)" />
           Expenses
-        </button>
-        <button className="flex h-12 w-52 pt-2   rounded-xl  ">
+        </a>
+        <a href='/data' className={`flex h-12 w-52 pt-2 rounded-xl ${
+    location.pathname === "/data" ? "bg-blue-300" : ""
+  }`}>
           <svg
             width="28"
             height="32"
@@ -137,7 +158,7 @@ const Sidebar = () => {
           </svg>
           Data Protection <br />
           (GDPR)
-        </button>
+        </a>
       </div>
       
       

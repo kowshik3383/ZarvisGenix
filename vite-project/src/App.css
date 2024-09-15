@@ -62,3 +62,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-20deg); }
+  60% { transform: rotate(20deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-wave-hand {
+  animation: wave 1.5s ease-in-out infinite;
+  transform-origin: bottom center; /* Make the hand wave from the bottom */
+}
