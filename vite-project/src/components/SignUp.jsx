@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import logo from "../../public/Logo.svg";
+import Logo from "../../public/Logo.svg";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
