@@ -6,7 +6,7 @@ import {
   FaFolder,
 } from "react-icons/fa"; // Import FaDotCircle
 import { CiCirclePlus } from "react-icons/ci"; // Import CiCirclePlus
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useLocation ,Link } from "react-router-dom";
 import axios from "axios";
 import Logo from "../../public/Logo.svg";
@@ -17,7 +17,7 @@ import { GiRecycle } from "react-icons/gi";
 import { AiFillWallet } from "react-icons/ai";
 import { FiFileText } from "react-icons/fi";
 import { IoIosArrowForward } from "react-icons/io";
-import Text from "./Text";
+
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,7 +36,7 @@ const Sidebar = () => {
             return;
           }
 
-          const res = await axios.get("http://localhost:5000/api/auth/user", {
+          const res = await axios.get("https://zarvisgenix-1.onrender.com/api/auth/user", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
